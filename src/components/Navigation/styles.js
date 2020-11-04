@@ -19,15 +19,16 @@ export const TopBar = styled.div`
     font-size: 0.8rem;
     font-weight: 500;
     width: 100%;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding: 3px 5px;
+    max-width: var(--max-width);
+    margin: auto;
 
     @media screen and (max-width: 800px) {
       justify-content: space-around;
     }
 
     li {
-      margin-right: 1rem;
+      margin-left: 1rem;
       display: flex;
       align-items: center;
 

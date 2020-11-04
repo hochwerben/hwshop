@@ -14,7 +14,8 @@ import Footer from '~/components/Footer'
 
 const Wrapper = styled.div`
   margin: 4rem auto;
-  max-width: 960px;
+  /* max-width: 960px; */
+  max-width: var(--max-width);
   padding: 0px 1.0875rem 1.45rem;
 
   @media screen and (max-width: ${breakpoints.m}px) {

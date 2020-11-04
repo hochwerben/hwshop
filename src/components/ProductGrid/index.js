@@ -60,25 +60,25 @@ const ProductGrid = () => {
               variants: [firstVariant],
             },
           }) => (
-            <Product key={id}>
-              <Link to={`/product/${handle}/`}>
-                {firstImage && firstImage.localFile && (
-                  <ImgContainer>
-                    <Img
-                      fixed={firstImage.localFile.childImageSharp.fixed}
-                      alt={handle}
-                    />
-                  </ImgContainer>
-                )}
-              </Link>
-              <Title>{title}</Title>
-              <PriceTag>{getPrice(firstVariant.price)}</PriceTag>
-            </Product>
-          )
+              <Product key={id}>
+                <Link to={`/produkt/${handle}/`}>
+                  {firstImage && firstImage.localFile && (
+                    <ImgContainer>
+                      <Img
+                        fixed={firstImage.localFile.childImageSharp.fixed}
+                        alt={handle}
+                      />
+                    </ImgContainer>
+                  )}
+                </Link>
+                <Title>{title}</Title>
+                <PriceTag>{getPrice(firstVariant.price)}</PriceTag>
+              </Product>
+            )
         )
       ) : (
-        <p>No Products found!</p>
-      )}
+          <p>No Products found!</p>
+        )}
     </Grid>
   )
 }

@@ -133,6 +133,6 @@ export const Button = styled.button`
   border: none;
   border-radius: 2px;
   font-size: ${({ sm }) => (sm ? '0.9rem' : '1.1rem')};
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.15); */
   cursor: pointer;
 `

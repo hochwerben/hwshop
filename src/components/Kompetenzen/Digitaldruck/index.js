@@ -21,7 +21,7 @@ const Digitaldruck = () => {
         relativePath: { eq: "kompetenzen/digitaldruck/pkw-beschriftung.jpg" }
       ) {
         childImageSharp {
-          fluid(quality: 90) {
+          fluid(quality: 90, maxWidth: 1100) {
             ...GatsbyImageSharpFluid
           }
           id
@@ -31,7 +31,7 @@ const Digitaldruck = () => {
         relativePath: { eq: "kompetenzen/digitaldruck/pkw-grafiken.jpg" }
       ) {
         childImageSharp {
-          fluid(quality: 90) {
+          fluid(quality: 90, maxWidth: 1100) {
             ...GatsbyImageSharpFluid
           }
           id
@@ -43,7 +43,7 @@ const Digitaldruck = () => {
         }
       ) {
         childImageSharp {
-          fluid(quality: 90) {
+          fluid(quality: 90, maxWidth: 1100) {
             ...GatsbyImageSharpFluid
           }
           id
@@ -55,7 +55,7 @@ const Digitaldruck = () => {
         }
       ) {
         childImageSharp {
-          fluid(quality: 90) {
+          fluid(quality: 90, maxWidth: 1100) {
             ...GatsbyImageSharpFluid
           }
           id
@@ -67,7 +67,7 @@ const Digitaldruck = () => {
       #   }
       # ) {
       #   childImageSharp {
-      #     fluid(quality: 90) {
+      #     fluid(quality: 90, maxWidth: 1100) {
       #       ...GatsbyImageSharpFluid
       #     }
       #     id
@@ -77,7 +77,7 @@ const Digitaldruck = () => {
         relativePath: { eq: "kompetenzen/digitaldruck/lkw-beschriftung.jpg" }
       ) {
         childImageSharp {
-          fluid(quality: 90) {
+          fluid(quality: 90, maxWidth: 1100) {
             ...GatsbyImageSharpFluid
           }
           id
@@ -87,7 +87,7 @@ const Digitaldruck = () => {
       #   relativePath: { eq: "kompetenzen/digitaldruck/lkw-grafiken.jpg" }
       # ) {
       #   childImageSharp {
-      #     fluid(quality: 90) {
+      #     fluid(quality: 90, maxWidth: 1100) {
       #       ...GatsbyImageSharpFluid
       #     }
       #     id
@@ -97,7 +97,7 @@ const Digitaldruck = () => {
         relativePath: { eq: "kompetenzen/digitaldruck/lkw-folierung.jpg" }
       ) {
         childImageSharp {
-          fluid(quality: 90) {
+          fluid(quality: 90, maxWidth: 1100) {
             ...GatsbyImageSharpFluid
           }
           id

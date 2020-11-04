@@ -21,7 +21,7 @@ const Werbetraeger = () => {
         relativePath: { eq: "kompetenzen/werbetraeger/shirts.jpg" }
       ) {
         childImageSharp {
-          fluid(quality: 90) {
+          fluid(quality: 90, maxWidth: 1100) {
             ...GatsbyImageSharpFluid
           }
           id
@@ -31,7 +31,7 @@ const Werbetraeger = () => {
         relativePath: { eq: "kompetenzen/werbetraeger/haengeschild-01.jpg" }
       ) {
         childImageSharp {
-          fluid(quality: 90) {
+          fluid(quality: 90, maxWidth: 1100) {
             ...GatsbyImageSharpFluid
           }
           id
@@ -41,7 +41,7 @@ const Werbetraeger = () => {
         relativePath: { eq: "kompetenzen/werbetraeger/aluverbund-01.jpg" }
       ) {
         childImageSharp {
-          fluid(quality: 90) {
+          fluid(quality: 90, maxWidth: 1100) {
             ...GatsbyImageSharpFluid
           }
           id
@@ -51,7 +51,7 @@ const Werbetraeger = () => {
         relativePath: { eq: "kompetenzen/werbetraeger/bauzaunbanner.jpg" }
       ) {
         childImageSharp {
-          fluid(quality: 90) {
+          fluid(quality: 90, maxWidth: 1100) {
             ...GatsbyImageSharpFluid
           }
           id
@@ -61,7 +61,7 @@ const Werbetraeger = () => {
         relativePath: { eq: "kompetenzen/werbetraeger/banner.jpg" }
       ) {
         childImageSharp {
-          fluid(quality: 90) {
+          fluid(quality: 90, maxWidth: 1100) {
             ...GatsbyImageSharpFluid
           }
           id
@@ -71,7 +71,7 @@ const Werbetraeger = () => {
         relativePath: { eq: "kompetenzen/werbetraeger/sticker-fussabdruck.png" }
       ) {
         childImageSharp {
-          fluid(quality: 90) {
+          fluid(quality: 90, maxWidth: 1100) {
             ...GatsbyImageSharpFluid
           }
           id

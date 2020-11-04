@@ -21,7 +21,7 @@ const Webdesign = () => {
         relativePath: { eq: "kompetenzen/webdesign/responsive-design.jpg" }
       ) {
         childImageSharp {
-          fluid(quality: 90) {
+          fluid(quality: 90, maxWidth: 1100) {
             ...GatsbyImageSharpFluid
           }
           id

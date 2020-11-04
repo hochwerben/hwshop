@@ -2,8 +2,8 @@ import React, { useContext } from 'react'
 import { Link } from 'gatsby'
 
 import StoreContext from '~/context/StoreContext'
-import { Wrapper } from './styles'
-import { Button } from '~/utils/styles'
+import { Wrapper, ImageContainer, ProductTitle, Options, Count, DeleteButton } from './styles'
+import { FaTrash } from 'react-icons/fa'
 
 const LineItem = props => {
   const { item } = props
@@ -16,14 +16,14 @@ const LineItem = props => {
     <img
       src={item.variant.image.src}
       alt={`${item.title} product shot`}
-      height="60px"
+    // height="60px"
     />
   ) : null
 
   const selectedOptions = item.variant.selectedOptions
     ? item.variant.selectedOptions.map(
-        option => `${option.name}: ${option.value} `
-      )
+      (option, index) => <li key={index}>{`${option.name}: ${option.value} `}</li>
+    )
     : null
 
   const handleRemove = () => {
@@ -32,20 +32,25 @@ const LineItem = props => {
 
   return (
     <Wrapper>
-      {console.log(item)}
-      <Link to={`/product/${item.variant.product.handle}/`}>
-        {variantImage}
-      </Link>
-      <p>
+      <ImageContainer>
+        <Link to={`/produkt/${item.variant.product.handle}/`}>
+          {variantImage}
+        </Link>
+      </ImageContainer>
+      <ProductTitle>
         {item.title}
         {`  `}
         {item.variant.title === !'Default Title' ? item.variant.title : ''}
-      </p>
-      {selectedOptions}
-      {item.quantity}
-      <Button sm onClick={handleRemove}>
-        Entfernen
-      </Button>
+      </ProductTitle>
+      <Options>
+        {selectedOptions}
+      </Options>
+      <Count>
+        {item.quantity}&nbsp;Stk.
+      </Count>
+      <DeleteButton>
+        <FaTrash onClick={handleRemove} style={{ cursor: 'pointer' }} />
+      </DeleteButton>
     </Wrapper>
   )
 }

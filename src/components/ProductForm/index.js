@@ -141,7 +141,7 @@ const ProductForm = ({ product }) => {
       >
         In den Warenkorb
       </Button>
-      {!available && <p>Dieses Produkt ist zur Zeit ausverkauft!</p>}
+      {!available && <p>Dieses Produkt ist zur Zeit leider ausverkauft!</p>}
     </>
   )
 }

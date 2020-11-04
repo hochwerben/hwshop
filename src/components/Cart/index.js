@@ -1,9 +1,8 @@
 import React, { useContext } from 'react'
-
 import StoreContext from '~/context/StoreContext'
 import LineItem from './LineItem'
 
-import { Wrapper } from './styles'
+import { Wrapper, SmallText, Price } from './styles'
 import { Button } from '~/utils/styles'
 
 const Cart = () => {
@@ -12,6 +11,7 @@ const Cart = () => {
   } = useContext(StoreContext)
 
   const handleCheckout = () => {
+    // window.location.replace(checkout.webUrl)
     window.open(checkout.webUrl)
   }
 
@@ -22,21 +22,22 @@ const Cart = () => {
   return (
     <Wrapper>
       {lineItems}
-      {/* <h2>Subtotal</h2>
-      <p>€ {checkout.subtotalPrice}</p>
-      <br />
-      <h2>Taxes</h2>
-      <p>€ {checkout.totalTax}</p>
-      <br /> */}
-      <h2>Summe</h2>
-      <p>€ {checkout.totalPrice}</p>
-      <br />
-      <Button
-        onClick={handleCheckout}
-        disabled={checkout.lineItems.length === 0}
-      >
-        Zur Kasse
-      </Button>
+      {/* <h2>Subtotal</h2> */}
+      {/* <p>€ {checkout.subtotalPrice}</p> */}
+      {/* <br /> */}
+      {/* <h2>Taxes</h2> */}
+      {/* <p>€ {checkout.totalTax}</p> */}
+      <div style={{ textAlign: 'center' }}>
+        <h2>Summe<SmallText>&nbsp;(inklusive Mwst.)</SmallText></h2>
+        <Price>€ {checkout.totalPrice}</Price>
+        <br />
+        <Button
+          onClick={handleCheckout}
+          disabled={checkout.lineItems.length === 0}
+        >
+          Zur Kasse
+        </Button>
+      </div>
     </Wrapper>
   )
 }
