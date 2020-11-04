@@ -25,7 +25,7 @@ const ProductPage = ({ data }) => {
               <MainImage>
                 <Img
                   fluid={product.images[0].localFile.childImageSharp.fluid}
-                  alt={product.images[0].}
+                  alt={product.title}
 
                 />
               </MainImage>
