@@ -127,12 +127,22 @@ export const ThemeTitle = styled.h1`
 `
 
 export const Button = styled.button`
-  background: var(--clr-primary);
-  padding: 5px 10px;
+  background-color: var(--clr-primary);
+  padding: 8px 16px;
   color: white;
-  border: none;
-  border-radius: 2px;
+  border: 1px solid var(--clr-primary);
+  border-radius: 4px;
   font-size: ${({ sm }) => (sm ? '0.9rem' : '1.1rem')};
-  /* box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.15); */
+  font-weight: 700;
   cursor: pointer;
+
+  &:hover {
+    background-color: transparent;
+    color: var(--clr-dark);  
+  }
+`
+
+export const NumberInput = styled.input`
+  padding: 8px;
+  display: block;
 `

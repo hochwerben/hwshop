@@ -5,7 +5,9 @@ import PropTypes from 'prop-types'
 
 import StoreContext from '~/context/StoreContext'
 
-import { Button } from '~/utils/styles'
+import { Button, NumberInput } from '~/utils/styles'
+import { Price } from './styles'
+import OptionPicker from '~/components/OptionPicker'
 
 const ProductForm = ({ product }) => {
   const {
@@ -99,11 +101,11 @@ const ProductForm = ({ product }) => {
 
   return (
     <>
-      <h3>{price}</h3>
+      <Price>{price}</Price>
       {options.map(({ id, name, values }, index) => (
         <React.Fragment key={id}>
           <label htmlFor={name}>{name} </label>
-          <select
+          <OptionPicker
             name={name}
             key={id}
             onChange={event => handleOptionChange(index, event)}
@@ -117,12 +119,12 @@ const ProductForm = ({ product }) => {
                 {value}
               </option>
             ))}
-          </select>
+          </OptionPicker>
           <br />
         </React.Fragment>
       ))}
       <label htmlFor="quantity">Anzahl </label>
-      <input
+      <NumberInput
         type="number"
         id="quantity"
         name="quantity"

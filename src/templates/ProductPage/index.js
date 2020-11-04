@@ -10,7 +10,8 @@ import {
   GridLeft,
   GridRight,
 } from '~/utils/styles'
-import { ProductTitle, ProductDescription } from './styles'
+import { ProductTitle, ProductDescription, MainImage, VariantsGallery } from './styles'
+// import OptionPicker from '~/components/OptionPicker'
 
 const ProductPage = ({ data }) => {
   const product = data.shopifyProduct
@@ -21,13 +22,22 @@ const ProductPage = ({ data }) => {
         <div style={{ minHeight: '60vh' }}>
           <TwoColumnGrid>
             <GridLeft>
-              {product.images.map(image => (
+              <MainImage>
                 <Img
-                  fluid={image.localFile.childImageSharp.fluid}
-                  key={image.id}
-                  alt={product.title}
+                  fluid={product.images[0].localFile.childImageSharp.fluid}
+                  alt={product.images[0].}
+
                 />
-              ))}
+              </MainImage>
+              <VariantsGallery>
+                {product.images.map(image => (
+                  <Img
+                    fluid={image.localFile.childImageSharp.fluid}
+                    key={image.id}
+                    alt={product.title}
+                  />
+                ))}
+              </VariantsGallery>
             </GridLeft>
             <GridRight>
               <ProductTitle>{product.title}</ProductTitle>
